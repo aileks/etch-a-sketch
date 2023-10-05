@@ -1,0 +1,12 @@
+:root {
+    --grid-rows: 16;
+    --grid-cols: 16;
+}
+
+#box-container {
+    display: grid;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    border: solid black;
+    border-width: 2px;
+}
