@@ -19,9 +19,9 @@ body {
     background: rgb(248, 248, 242);
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
-    border: solid black;
+    border: solid rgb(40, 42, 54);
     border-width: 3px;
-    border-radius: 8px;
+    border-radius: 6px;
     width: 50rem;
     height: 50rem;
     overflow: hidden;

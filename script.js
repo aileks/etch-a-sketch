@@ -15,11 +15,11 @@ function createDivs(num = 32) {
 
 function createUserGrid(gridSize) {
   if (gridSize > 100){
-    alert("ERROR: Please choose a smaller number.")
-  } else {
-    clearGrid();
-    createDivs(gridSize);
-  };
+    alert("ERROR: Please choose a smaller number.");
+    return;
+  }
+  clearGrid();
+  createDivs(gridSize);
 }
 
 function getUserInput() {
@@ -28,8 +28,7 @@ function getUserInput() {
 }
 
 function clearGrid() {
-  container.querySelectorAll("*").forEach((e) => e.remove());
-  createDivs();
+  container.querySelectorAll("*").forEach((e) => e.style.background = "");
 }
 
 createDivs();
@@ -38,4 +37,8 @@ const clearButton = document.getElementById("clear");
 clearButton.addEventListener("click", () => clearGrid());
 
 const changeSizeButton = document.getElementById("change-size");
-changeSizeButton.addEventListener("click", () => createUserGrid(getUserInput()));
+changeSizeButton.addEventListener("click", () => {
+  let input = getUserInput();
+  if (!input) return;
+  createUserGrid(input);
+});
