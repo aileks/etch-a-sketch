@@ -1,6 +1,6 @@
 const container = document.getElementById("grid-container");
 
-function createDivs(num = 16) {
+function createDivs(num = 32) {
   container.style.setProperty("--grid-rows", num);
   container.style.setProperty("--grid-cols", num);
 
@@ -8,7 +8,7 @@ function createDivs(num = 16) {
     let newDiv = document.createElement("div");
     newDiv.id = i + 1;
     newDiv.className = "grid";
-    newDiv.addEventListener("mouseover", () => newDiv.style.background = "black");
+    newDiv.addEventListener("mouseover", () => newDiv.style.background = "#282a36");
     container.appendChild(newDiv);
   };
 }

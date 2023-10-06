@@ -3,25 +3,38 @@
     --grid-cols: 16;
 }
 
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(68, 71, 90);
+    margin: 1rem 1rem;
+    color: rgb(248, 248, 242)
+}
+
 #grid-container {
     display: grid;
+    background: rgb(248, 248, 242);
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
     border: solid black;
     border-width: 3px;
-    border-radius: 16px;
-    width: 99%;
-    height: 95%;
-    position: absolute;
-    margin: auto;
+    border-radius: 8px;
+    width: 50rem;
+    height: 50rem;
+    overflow: hidden;
 }
 
 #btns {
     text-align: center;
-    margin: 3px;
+    margin: 1rem 1rem;
 }
 
 button {
+    border: solid rgb(189, 147, 249);
     border-radius: 4px;
-    background: rgb(255, 85, 85);
+    background: rgb(189, 147, 249);
+    font-size: 14px;
 }
