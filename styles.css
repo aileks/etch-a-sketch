@@ -3,10 +3,25 @@
     --grid-cols: 16;
 }
 
-#box-container {
+#grid-container {
     display: grid;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
     border: solid black;
-    border-width: 2px;
+    border-width: 3px;
+    border-radius: 16px;
+    width: 99%;
+    height: 95%;
+    position: absolute;
+    margin: auto;
+}
+
+#btns {
+    text-align: center;
+    margin: 3px;
+}
+
+button {
+    border-radius: 4px;
+    background: rgb(255, 85, 85);
 }
