@@ -1,51 +1,50 @@
 :root {
-    --grid-rows: 16;
-    --grid-cols: 16;
+  --grid-rows: 16;
+  --grid-cols: 16;
 }
 
-
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: #44475a;
-    margin: 1rem 1rem;
-    color: #f8f8f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #44475a;
+  margin: 1rem 1rem;
+  color: #f8f8f2;
 }
 
 #grid-container {
-    display: grid;
-    background: #f8f8f2;
-    grid-template-rows: repeat(var(--grid-rows), 1fr);
-    grid-template-columns: repeat(var(--grid-cols), 1fr);
-    border: solid #282a36;
-    border-width: 3px;
-    border-radius: 6px;
-    width: 50rem;
-    height: 50rem;
-    overflow: hidden;
+  display: grid;
+  background: #f8f8f2;
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+  border: solid #282a36;
+  border-width: 3px;
+  border-radius: 6px;
+  width: 45rem;
+  height: 45rem;
+  overflow: hidden;
 }
 
 #btns {
-    text-align: center;
-    margin: 1rem 1rem;
+  text-align: center;
+  margin: 1rem 1rem;
 }
 
 button {
-    border: solid #bd93f9;
-    border-radius: 4px;
-    background: #bd93f9;
-    font-size: 14px;
-    margin: 0.5rem;
+  border: solid #bd93f9;
+  border-radius: 4px;
+  background: #bd93f9;
+  font-size: 14px;
+  margin: 0.5rem;
 }
 
 #clear:hover {
-    border: solid #ff5555;
-    background: #ff5555;
+  border: solid #ff5555;
+  background: #ff5555;
 }
 
 #change-size:hover {
-    border: solid #50fa7b;
-    background: #50fa7b;
+  border: solid #50fa7b;
+  background: #50fa7b;
 }
