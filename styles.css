@@ -3,6 +3,10 @@
   --grid-cols: 16;
 }
 
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 body {
   display: flex;
   flex-direction: column;
