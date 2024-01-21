@@ -25,20 +25,17 @@ function handleTouchMove(e) {
 }
 
 function createUserGrid(gridSize) {
-  if (gridSize > 100){
-    alert("ERROR: Please choose a smaller number.");
-    return;
-  }
-  if (gridSize < 1) {
-    alert("ERROR: Please choose a larger number.");
-    return;
-  }
   clearGrid();
   createDivs(gridSize);
 }
 
 function getUserInput() {
   let userInput = prompt("Enter grid size (Max: 100):");
+
+  if (!userInput || isNaN(userInput) || !Number.isInteger(parseFloat(userInput)) || userInput < 8 || userInput >= 100) {
+    alert("ERROR: Please enter whole number between 8 and 100.");
+    return;
+  }
   return userInput;
 }
 
