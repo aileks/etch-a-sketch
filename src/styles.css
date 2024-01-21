@@ -12,11 +12,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #b4b8c5;
+  background: rgb(180, 184, 197);
   margin: 0;
   padding: 0;
   height: 100vh;
   padding: 1rem;
+  overflow: none;
 }
 
 a {
@@ -34,40 +35,194 @@ header {
 }
 
 footer {
-  margin-bottom: 2rem;
+  margin: 2rem 0 2rem 0;
 }
 
 button {
-  border: 2px solid rgba(40, 75, 99);
+  border: 2px solid rgb(40, 75, 99);
   border-radius: 6px;
-  background: rgba(21, 50, 67);
+  background: rgb(21, 50, 67);
   font-size: 16px;
   margin: 8px;
   padding: 6px;
-  color: #e9ebf8;
+  color: rgb(233, 235, 248);
+}
+
+button:hover {
+  border-color: rgb(21, 50, 67);
+  background: rgb(40, 75, 99);
 }
 
 #grid-container {
   display: grid;
-  background: #e9ebf8;
+  background: rgb(233, 235, 248);
   grid-template-rows: repeat(var(--grid-rows), 1fr);
   grid-template-columns: repeat(var(--grid-cols), 1fr);
   border: 1px solid;
   border-width: 3px;
   border-radius: 6px;
+  border-color: rgb(40, 75, 99);
   width: 90vw;
   max-width: 600px;
-  height: 60vh;
-  max-height: 400px;
-  overflow: hidden;
+  height: 90vw;
+  max-height: 600px;
 }
 
-#btns {
+#button-container {
   text-align: center;
   margin: 1.5rem;
 }
 
-#clear:hover, #change-size:hover {
-  border-color: rgb(21, 50, 67);
-  background: rgb(40, 75, 99);
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-animation: fadeInFromNone 0.3s;
+  -moz-animation: fadeInFromNone 0.3s;
+  -o-animation: fadeInFromNone 0.3s;
+  animation: fadeInFromNone 0.3s;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(180, 184, 197);
+  margin: 15% auto;
+  padding: 20px;
+  border: 2px solid rgb(40, 75, 99);
+  border-radius: 6px;
+  width: 50vw;
+}
+
+.modal.hide {
+  -webkit-animation: fadeOutToNone 0.2s;
+  -moz-animation: fadeOutToNone 0.2s;
+  -o-animation: fadeOutToNone 0.2s;
+  animation: fadeOutToNone 0.2s;
+}
+
+.modal-content input, .modal-content button {
+  margin: 1.5rem;
+}
+
+.modal-content input {
+  width: 10%;
+  padding: 6px;
+}
+
+.modal-header {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid rgb(40, 75, 99);
+}
+
+
+@media (orientation: landscape) {
+  #grid-container {
+    width: 90vh;
+    height: 90vh;
+  }
+}
+
+@media (max-width: 600px) {
+  modal, .modal-content {
+    width: 70%;
+    height: 50%;
+  }
+}
+
+@-webkit-keyframes fadeInFromNone {
+  0% {
+      display: none;
+      opacity: 0;
+  }
+  100% {
+      display: block;
+      opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeInFromNone {
+  0% {
+      display: none;
+      opacity: 0;
+  }
+  100% {
+      display: block;
+      opacity: 1;
+  }
+}
+
+@-o-keyframes fadeInFromNone {
+  0% {
+      display: none;
+      opacity: 0;
+  }
+  100% {
+      display: block;
+      opacity: 1;
+  }
+}
+
+@keyframes fadeInFromNone {
+  0% {
+      display: none;
+      opacity: 0;
+  }
+  100% {
+      display: block;
+      opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOutToNone {
+  0% {
+      display: block;
+      opacity: 1;
+  }
+  100% {
+      display: none;
+      opacity: 0;
+  }
+}
+
+@-moz-keyframes fadeOutToNone {
+  0% {
+      display: block;
+      opacity: 1;
+  }
+  100% {
+      display: none;
+      opacity: 0;
+  }
+}
+
+@-o-keyframes fadeOutToNone {
+  0% {
+      display: block;
+      opacity: 1;
+  }
+  100% {
+      display: none;
+      opacity: 0;
+  }
+}
+
+@keyframes fadeOutToNone {
+  0% {
+      display: block;
+      opacity: 1;
+  }
+  100% {
+      display: none;
+      opacity: 0;
+  }
 }
