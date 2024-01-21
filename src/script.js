@@ -36,6 +36,7 @@ function getUserInput() {
     alert("ERROR: Please enter whole number between 8 and 100.");
     return;
   }
+
   return userInput;
 }
 

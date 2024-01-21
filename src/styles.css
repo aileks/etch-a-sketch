@@ -17,6 +17,7 @@ body {
   padding: 0;
   height: 100vh;
   padding: 2rem;
+  overflow: none;
 }
 
 a {
@@ -38,7 +39,7 @@ header {
 }
 
 footer {
-  bottom: 0;
+  margin-top: auto;
 }
 
 button {
