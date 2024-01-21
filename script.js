@@ -13,6 +13,21 @@ function createDivs(num = 32) {
   };
 }
 
+function handleTouchMove(e) {
+  e.preventDefault();
+
+  const element = document.elementFromPoint(e.touches[0].clientX, e.touches[0].clientY);
+
+  if (element && element.classList.contains("grid")) {
+    element.style.background = "#282a36";
+  }
+}
+
+function handleTouchStart(e) {
+  e.preventDefault();
+  handleTouchMove(e);
+}
+
 function createUserGrid(gridSize) {
   if (gridSize > 100){
     alert("ERROR: Please choose a smaller number.");
@@ -42,3 +57,5 @@ changeSizeButton.addEventListener("click", () => {
   if (!input) return;
   createUserGrid(input);
 });
+
+document.addEventlistener("touchmove", handleTouchMove);

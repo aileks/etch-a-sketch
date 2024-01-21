@@ -12,17 +12,17 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #44475a;
+  background: #e0ebf8;
   margin: 1rem 1rem;
-  color: #f8f8f2;
+  color: #2d080a;
 }
 
 #grid-container {
   display: grid;
-  background: #f8f8f2;
+  background: #e9ebf8;
   grid-template-rows: repeat(var(--grid-rows), 1fr);
   grid-template-columns: repeat(var(--grid-cols), 1fr);
-  border: solid #282a36;
+  border: 1px solid #2d080a;
   border-width: 3px;
   border-radius: 6px;
   width: 45rem;
@@ -36,19 +36,15 @@ body {
 }
 
 button {
-  border: solid #bd93f9;
+  border: 2px solid rgba(21, 50, 67, 0.85);
   border-radius: 4px;
-  background: #bd93f9;
+  background: rgba(40, 75, 99, 0.85);
   font-size: 14px;
   margin: 0.5rem;
+  color: #e9ebf8;
 }
 
-#clear:hover {
-  border: solid #ff5555;
-  background: #ff5555;
-}
-
-#change-size:hover {
-  border: solid #50fa7b;
-  background: #50fa7b;
+#clear:hover, #change-size:hover {
+  border-color: rgb(21, 50, 67);
+  background: rgb(40, 75, 99);
 }
