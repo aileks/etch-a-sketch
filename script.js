@@ -16,10 +16,11 @@ function createDivs(num = 32) {
 function handleTouchMove(e) {
   e.preventDefault();
 
-  const element = document.elementFromPoint(e.touches[0].clientX, e.touches[0].clientY);
+  const touch = event.touches[0];
+  const element = document.elementFromPoint(touch.clientX, touch.clientY);
 
   if (element && element.classList.contains("grid")) {
-    element.style.background = "#282a36";
+    element.style.background = "black";
   }
 }
 
@@ -33,12 +34,16 @@ function createUserGrid(gridSize) {
     alert("ERROR: Please choose a smaller number.");
     return;
   }
+  if (gridSize < 1) {
+    alert("ERROR: Please choose a larger number.");
+    return;
+  }
   clearGrid();
   createDivs(gridSize);
 }
 
 function getUserInput() {
-  let userInput = prompt("Enter grid size:");
+  let userInput = prompt("Enter grid size (Max: 100):");
   return userInput;
 }
 
