@@ -13,7 +13,13 @@ body {
   justify-content: center;
   align-items: center;
   background: #b4b8c5;
-  margin: 1rem 1rem;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+heading {
+  margin-bottom: 2rem;
 }
 
 #grid-container {
@@ -24,8 +30,10 @@ body {
   border: 1px solid;
   border-width: 3px;
   border-radius: 6px;
-  width: 45rem;
-  height: 45rem;
+  width: 90vw;
+  max-width: 600px;
+  height: 90vw;
+  max-height: 600px;
   overflow: hidden;
 }
 
@@ -36,10 +44,11 @@ body {
 
 button {
   border: 2px solid rgba(21, 50, 67, 0.85);
-  border-radius: 4px;
+  border-radius: 6px;
   background: rgba(40, 75, 99, 0.85);
-  font-size: 14px;
+  font-size: 16px;
   margin: 0.5rem;
+  padding: 0.25rem;
   color: #e9ebf8;
 }
 
