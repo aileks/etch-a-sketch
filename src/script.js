@@ -57,3 +57,9 @@ changeSizeButton.addEventListener("click", () => {
 });
 
 document.addEventListener("touchmove", handleTouchMove, { passive: false });
+document.addEventListener("touchstart", () => {
+  document.body.style.overflow = "hidden";
+})
+document.addEventListener("touchend", () => {
+  document.body.style.overflow = "auto";
+})
