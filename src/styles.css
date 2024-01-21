@@ -16,6 +16,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
+  padding: 2rem;
 }
 
 a {
@@ -25,7 +26,6 @@ a {
 }
 
 header, footer {
-  position: fixed;
   width: 100%;
   padding: 0.75rem;
   text-align: center;
@@ -61,7 +61,7 @@ button {
   border-radius: 6px;
   width: 90vw;
   max-width: 600px;
-  height: 90vw;
+  height: 90vh;
   max-height: 600px;
   overflow: hidden;
 }
