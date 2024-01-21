@@ -24,11 +24,6 @@ function handleTouchMove(e) {
   }
 }
 
-function handleTouchStart(e) {
-  e.preventDefault();
-  handleTouchMove(e);
-}
-
 function createUserGrid(gridSize) {
   if (gridSize > 100){
     alert("ERROR: Please choose a smaller number.");
@@ -63,4 +58,4 @@ changeSizeButton.addEventListener("click", () => {
   createUserGrid(input);
 });
 
-document.addEventListener("touchmove", handleTouchStart);
+document.addEventListener("touchmove", handleTouchMove, { passive: false });
