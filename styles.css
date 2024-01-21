@@ -12,9 +12,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #e0ebf8;
+  background: #b4b8c5;
   margin: 1rem 1rem;
-  color: #2d080a;
 }
 
 #grid-container {
@@ -22,7 +21,7 @@ body {
   background: #e9ebf8;
   grid-template-rows: repeat(var(--grid-rows), 1fr);
   grid-template-columns: repeat(var(--grid-cols), 1fr);
-  border: 1px solid #2d080a;
+  border: 1px solid;
   border-width: 3px;
   border-radius: 6px;
   width: 45rem;

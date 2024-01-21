@@ -63,4 +63,4 @@ changeSizeButton.addEventListener("click", () => {
   createUserGrid(input);
 });
 
-document.addEventListener("touchmove", handleTouchMove);
+document.addEventListener("touchmove", handleTouchStart);
