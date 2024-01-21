@@ -32,7 +32,7 @@ function createUserGrid(gridSize) {
 function getUserInput() {
   let userInput = prompt("Enter grid size (Max: 100):");
 
-  if (!userInput || isNaN(userInput) || !Number.isInteger(parseFloat(userInput)) || userInput < 8 || userInput >= 100) {
+  if (!userInput || isNaN(userInput) || !Number.isInteger(parseFloat(userInput)) || userInput < 8 || userInput > 100) {
     alert("ERROR: Please enter whole number between 8 and 100.");
     return;
   }
