@@ -99,7 +99,7 @@ button:hover {
   padding: 20px;
   border: 2px solid rgb(40, 75, 99);
   border-radius: 6px;
-  width: 50vw;
+  width: 20vw;
 }
 
 .modal.hide {
